@@ -1,0 +1,16 @@
+{
+  "name": "asapp-chat-application",
+  "version": "1.0.0",
+  "description": "Full-stack chat application with ML-powered responses",
+  "scripts": {
+    "dev": "node start-dev.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && python run.py",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:all": "npm run install:frontend && npm run install:backend"
+  },
+  "keywords": ["chat", "ml", "react", "flask", "ai"],
+  "author": "",
+  "license": "MIT"
+}
