@@ -6,29 +6,8 @@ A full-stack chat application with ML-powered intent classification using Distil
 
 The system implements an automated classification workflow with human intervention loops, as shown in the diagram below:
 
-```mermaid
-graph TD
-    A[Front End] --> B[Preprocessing]
-    B --> C[Classifier<br/>DistilBERT LM]
-    C --> D[Confirmation Module]
-    
-    D -->|If <= threshold<br/>irrelevant| E[Restructure & Loop once]
-    E --> A
-    
-    D -->|High >= threshold| F[Confirm top 1 only<br/>if NO then Human Intervention]
-    F --> G[Human Intervention]
-    
-    D -->|If Mid Threshold| H[Show top 2 for confirmation]
-    H --> I[Database for Incorrect Classification<br/>MisClassified cases]
-    
-    G --> I
-    
-    style A fill:#e1f5fe
-    style C fill:#f3e5f5
-    style D fill:#fff3e0
-    style G fill:#ffebee
-    style I fill:#e8f5e8
-```
+![workflow_diagram](https://github.com/user-attachments/assets/d9b70d85-fccb-4d7a-b288-885a5eba7fec)
+
 
 ## 🚀 Features
 
